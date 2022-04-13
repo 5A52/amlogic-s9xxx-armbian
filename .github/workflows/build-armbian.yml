@@ -90,7 +90,7 @@ jobs:
                             CLEAN_LEVEL=make,debs COMPRESS_OUTPUTIMAGE=sha
           echo "::set-output name=status::success"
 
-      - name: Rebuild Armbian for amlogic s9xxx
+      - name: Rebuild Armbian for amlogic s905x3
         id: rebuild
         if: steps.compile.outputs.status == 'success' && !cancelled()
         run: |
